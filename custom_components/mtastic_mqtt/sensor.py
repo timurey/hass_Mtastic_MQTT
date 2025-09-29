@@ -240,6 +240,8 @@ class _TelemetryRadiation(BaseEntity, sensor.SensorEntity):
         self._attr_state_class = "measurement"
         self._attr_suggested_display_precision = 1
         self._attr_entity_registry_enabled_default = False
+        self._attr_icon = "mdi:radioactive"
+
 
     @property
     def native_value(self) -> float | None:
