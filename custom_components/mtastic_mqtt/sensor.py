@@ -246,7 +246,6 @@ class _TelemetryRadiation(BaseEntity, sensor.SensorEntity):
     @property
     def native_value(self) -> float | None:
         if tel := self.coordinator.data.get("environment_metrics"):
-            print (tel)
             if (value := tel.get("radiation")) > 0:
                 return value
         return None
