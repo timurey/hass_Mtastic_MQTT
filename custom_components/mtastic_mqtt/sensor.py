@@ -20,7 +20,25 @@ async def async_setup_entry(hass, entry, async_setup_entities):
         _TelemetryRelativeHumidity(coordinator),
         _TelemetryBarometricPressure(coordinator),
         _TelemetryGasResistance(coordinator),
-        _TelemetryRadiation(coordinator)
+        _TelemetryRadiation(coordinator),
+        _TelemetryCh1Voltage(coordinator),
+        _TelemetryCh1Current(coordinator),
+        _TelemetryCh2Voltage(coordinator),
+        _TelemetryCh2Current(coordinator),
+        _TelemetryCh3Voltage(coordinator),
+        _TelemetryCh3Current(coordinator),
+        _TelemetryCh4Voltage(coordinator),
+        _TelemetryCh4Current(coordinator),
+        _TelemetryCh5Voltage(coordinator),
+        _TelemetryCh5Current(coordinator),
+        _TelemetryCh6Voltage(coordinator),
+        _TelemetryCh6Current(coordinator),
+        _TelemetryCh7Voltage(coordinator),
+        _TelemetryCh7Current(coordinator),
+        _TelemetryCh8Voltage(coordinator),
+        _TelemetryCh8Current(coordinator),
+
+
     ])
 
 class _TelemetryBattery(BaseEntity, sensor.SensorEntity):
@@ -247,5 +265,325 @@ class _TelemetryRadiation(BaseEntity, sensor.SensorEntity):
     def native_value(self) -> float | None:
         if tel := self.coordinator.data.get("environment_metrics"):
             if (value := tel.get("radiation")) > 0:
+                return value
+        return None
+
+class _TelemetryCh1Voltage(BaseEntity, sensor.SensorEntity):
+
+    def __init__(self, coordinator):
+        super().__init__(coordinator)
+        self.with_name(f"tel_ch1_voltage", "Voltage")
+        self._attr_device_class = sensor.SensorDeviceClass.VOLTAGE
+        self._attr_state_class = "measurement"
+        self._attr_native_unit_of_measurement = "V"
+        self._attr_suggested_display_precision = 1
+        self._attr_entity_registry_enabled_default = False
+        self._attr_icon = "mdi:radioactive"
+
+
+    @property
+    def native_value(self) -> float | None:
+        if tel := self.coordinator.data.get("power_metrics"):
+            if (value := tel.get("ch1_voltage")) > 0:
+                return value
+        return None
+    
+class _TelemetryCh1Current(BaseEntity, sensor.SensorEntity):
+
+    def __init__(self, coordinator):
+        super().__init__(coordinator)
+        self.with_name(f"tel_ch1_current", "Current")
+        self._attr_device_class = sensor.SensorDeviceClass.VOLTAGE
+        self._attr_state_class = "measurement"
+        self._attr_native_unit_of_measurement = "mA"
+        self._attr_suggested_display_precision = 1
+        self._attr_entity_registry_enabled_default = False
+        self._attr_icon = "mdi:radioactive"
+
+
+    @property
+    def native_value(self) -> float | None:
+        if tel := self.coordinator.data.get("power_metrics"):
+            if (value := tel.get("ch1_current")) > 0:
+                return value
+        return None
+    
+class _TelemetryCh2Voltage(BaseEntity, sensor.SensorEntity):
+
+    def __init__(self, coordinator):
+        super().__init__(coordinator)
+        self.with_name(f"tel_ch2_voltage", "Voltage")
+        self._attr_device_class = sensor.SensorDeviceClass.VOLTAGE
+        self._attr_state_class = "measurement"
+        self._attr_native_unit_of_measurement = "V"
+        self._attr_suggested_display_precision = 1
+        self._attr_entity_registry_enabled_default = False
+        self._attr_icon = "mdi:radioactive"
+
+
+    @property
+    def native_value(self) -> float | None:
+        if tel := self.coordinator.data.get("power_metrics"):
+            if (value := tel.get("ch2_voltage")) > 0:
+                return value
+        return None
+    
+class _TelemetryCh2Current(BaseEntity, sensor.SensorEntity):
+
+    def __init__(self, coordinator):
+        super().__init__(coordinator)
+        self.with_name(f"tel_ch2_current", "Current")
+        self._attr_device_class = sensor.SensorDeviceClass.VOLTAGE
+        self._attr_state_class = "measurement"
+        self._attr_native_unit_of_measurement = "mA"
+        self._attr_suggested_display_precision = 1
+        self._attr_entity_registry_enabled_default = False
+        self._attr_icon = "mdi:radioactive"
+
+
+    @property
+    def native_value(self) -> float | None:
+        if tel := self.coordinator.data.get("power_metrics"):
+            if (value := tel.get("ch2_current")) > 0:
+                return value
+        return None
+    
+class _TelemetryCh3Voltage(BaseEntity, sensor.SensorEntity):
+
+    def __init__(self, coordinator):
+        super().__init__(coordinator)
+        self.with_name(f"tel_ch3_voltage", "Voltage")
+        self._attr_device_class = sensor.SensorDeviceClass.VOLTAGE
+        self._attr_state_class = "measurement"
+        self._attr_native_unit_of_measurement = "V"
+        self._attr_suggested_display_precision = 1
+        self._attr_entity_registry_enabled_default = False
+        self._attr_icon = "mdi:radioactive"
+
+
+    @property
+    def native_value(self) -> float | None:
+        if tel := self.coordinator.data.get("power_metrics"):
+            if (value := tel.get("ch3_voltage")) > 0:
+                return value
+        return None
+    
+class _TelemetryCh3Current(BaseEntity, sensor.SensorEntity):
+
+    def __init__(self, coordinator):
+        super().__init__(coordinator)
+        self.with_name(f"tel_ch3_current", "Current")
+        self._attr_device_class = sensor.SensorDeviceClass.VOLTAGE
+        self._attr_state_class = "measurement"
+        self._attr_native_unit_of_measurement = "mA"
+        self._attr_suggested_display_precision = 1
+        self._attr_entity_registry_enabled_default = False
+        self._attr_icon = "mdi:radioactive"
+
+
+    @property
+    def native_value(self) -> float | None:
+        if tel := self.coordinator.data.get("power_metrics"):
+            if (value := tel.get("ch3_current")) > 0:
+                return value
+        return None
+    
+class _TelemetryCh4Voltage(BaseEntity, sensor.SensorEntity):
+
+    def __init__(self, coordinator):
+        super().__init__(coordinator)
+        self.with_name(f"tel_ch4_voltage", "Voltage")
+        self._attr_device_class = sensor.SensorDeviceClass.VOLTAGE
+        self._attr_state_class = "measurement"
+        self._attr_native_unit_of_measurement = "V"
+        self._attr_suggested_display_precision = 1
+        self._attr_entity_registry_enabled_default = False
+        self._attr_icon = "mdi:radioactive"
+
+
+    @property
+    def native_value(self) -> float | None:
+        if tel := self.coordinator.data.get("power_metrics"):
+            if (value := tel.get("ch4_voltage")) > 0:
+                return value
+        return None
+    
+class _TelemetryCh4Current(BaseEntity, sensor.SensorEntity):
+
+    def __init__(self, coordinator):
+        super().__init__(coordinator)
+        self.with_name(f"tel_ch4_current", "Current")
+        self._attr_device_class = sensor.SensorDeviceClass.VOLTAGE
+        self._attr_state_class = "measurement"
+        self._attr_native_unit_of_measurement = "mA"
+        self._attr_suggested_display_precision = 1
+        self._attr_entity_registry_enabled_default = False
+        self._attr_icon = "mdi:radioactive"
+
+
+    @property
+    def native_value(self) -> float | None:
+        if tel := self.coordinator.data.get("power_metrics"):
+            if (value := tel.get("ch4_current")) > 0:
+                return value
+        return None
+
+class _TelemetryCh5Voltage(BaseEntity, sensor.SensorEntity):
+
+    def __init__(self, coordinator):
+        super().__init__(coordinator)
+        self.with_name(f"tel_ch5_voltage", "Voltage")
+        self._attr_device_class = sensor.SensorDeviceClass.VOLTAGE
+        self._attr_state_class = "measurement"
+        self._attr_native_unit_of_measurement = "V"
+        self._attr_suggested_display_precision = 1
+        self._attr_entity_registry_enabled_default = False
+        self._attr_icon = "mdi:radioactive"
+
+
+    @property
+    def native_value(self) -> float | None:
+        if tel := self.coordinator.data.get("power_metrics"):
+            if (value := tel.get("ch5_voltage")) > 0:
+                return value
+        return None
+    
+class _TelemetryCh5Current(BaseEntity, sensor.SensorEntity):
+
+    def __init__(self, coordinator):
+        super().__init__(coordinator)
+        self.with_name(f"tel_ch5_current", "Current")
+        self._attr_device_class = sensor.SensorDeviceClass.VOLTAGE
+        self._attr_state_class = "measurement"
+        self._attr_native_unit_of_measurement = "mA"
+        self._attr_suggested_display_precision = 1
+        self._attr_entity_registry_enabled_default = False
+        self._attr_icon = "mdi:radioactive"
+
+
+    @property
+    def native_value(self) -> float | None:
+        if tel := self.coordinator.data.get("power_metrics"):
+            if (value := tel.get("ch5_current")) > 0:
+                return value
+        return None
+    
+class _TelemetryCh6Voltage(BaseEntity, sensor.SensorEntity):
+
+    def __init__(self, coordinator):
+        super().__init__(coordinator)
+        self.with_name(f"tel_ch6_voltage", "Voltage")
+        self._attr_device_class = sensor.SensorDeviceClass.VOLTAGE
+        self._attr_state_class = "measurement"
+        self._attr_native_unit_of_measurement = "V"
+        self._attr_suggested_display_precision = 1
+        self._attr_entity_registry_enabled_default = False
+        self._attr_icon = "mdi:radioactive"
+
+
+    @property
+    def native_value(self) -> float | None:
+        if tel := self.coordinator.data.get("power_metrics"):
+            if (value := tel.get("ch6_voltage")) > 0:
+                return value
+        return None
+    
+class _TelemetryCh6Current(BaseEntity, sensor.SensorEntity):
+
+    def __init__(self, coordinator):
+        super().__init__(coordinator)
+        self.with_name(f"tel_ch6_current", "Current")
+        self._attr_device_class = sensor.SensorDeviceClass.VOLTAGE
+        self._attr_state_class = "measurement"
+        self._attr_native_unit_of_measurement = "mA"
+        self._attr_suggested_display_precision = 1
+        self._attr_entity_registry_enabled_default = False
+        self._attr_icon = "mdi:radioactive"
+
+
+    @property
+    def native_value(self) -> float | None:
+        if tel := self.coordinator.data.get("power_metrics"):
+            if (value := tel.get("ch6_current")) > 0:
+                return value
+        return None
+    
+class _TelemetryCh7Voltage(BaseEntity, sensor.SensorEntity):
+
+    def __init__(self, coordinator):
+        super().__init__(coordinator)
+        self.with_name(f"tel_ch7_voltage", "Voltage")
+        self._attr_device_class = sensor.SensorDeviceClass.VOLTAGE
+        self._attr_state_class = "measurement"
+        self._attr_native_unit_of_measurement = "V"
+        self._attr_suggested_display_precision = 1
+        self._attr_entity_registry_enabled_default = False
+        self._attr_icon = "mdi:radioactive"
+
+
+    @property
+    def native_value(self) -> float | None:
+        if tel := self.coordinator.data.get("power_metrics"):
+            if (value := tel.get("ch7_voltage")) > 0:
+                return value
+        return None
+    
+class _TelemetryCh7Current(BaseEntity, sensor.SensorEntity):
+
+    def __init__(self, coordinator):
+        super().__init__(coordinator)
+        self.with_name(f"tel_ch7_current", "Current")
+        self._attr_device_class = sensor.SensorDeviceClass.VOLTAGE
+        self._attr_state_class = "measurement"
+        self._attr_native_unit_of_measurement = "mA"
+        self._attr_suggested_display_precision = 1
+        self._attr_entity_registry_enabled_default = False
+        self._attr_icon = "mdi:radioactive"
+
+
+    @property
+    def native_value(self) -> float | None:
+        if tel := self.coordinator.data.get("power_metrics"):
+            if (value := tel.get("ch7_current")) > 0:
+                return value
+        return None
+    
+class _TelemetryCh8Voltage(BaseEntity, sensor.SensorEntity):
+
+    def __init__(self, coordinator):
+        super().__init__(coordinator)
+        self.with_name(f"tel_ch8_voltage", "Voltage")
+        self._attr_device_class = sensor.SensorDeviceClass.VOLTAGE
+        self._attr_state_class = "measurement"
+        self._attr_native_unit_of_measurement = "V"
+        self._attr_suggested_display_precision = 1
+        self._attr_entity_registry_enabled_default = False
+        self._attr_icon = "mdi:radioactive"
+
+
+    @property
+    def native_value(self) -> float | None:
+        if tel := self.coordinator.data.get("power_metrics"):
+            if (value := tel.get("ch8_voltage")) > 0:
+                return value
+        return None
+    
+class _TelemetryCh8Current(BaseEntity, sensor.SensorEntity):
+
+    def __init__(self, coordinator):
+        super().__init__(coordinator)
+        self.with_name(f"tel_ch8_current", "Current")
+        self._attr_device_class = sensor.SensorDeviceClass.VOLTAGE
+        self._attr_state_class = "measurement"
+        self._attr_native_unit_of_measurement = "mA"
+        self._attr_suggested_display_precision = 1
+        self._attr_entity_registry_enabled_default = False
+        self._attr_icon = "mdi:radioactive"
+
+
+    @property
+    def native_value(self) -> float | None:
+        if tel := self.coordinator.data.get("power_metrics"):
+            if (value := tel.get("ch8_current")) > 0:
                 return value
         return None
