@@ -278,8 +278,7 @@ class _TelemetryCh1Voltage(BaseEntity, sensor.SensorEntity):
         self._attr_native_unit_of_measurement = "V"
         self._attr_suggested_display_precision = 1
         self._attr_entity_registry_enabled_default = False
-        self._attr_icon = "mdi:radioactive"
-
+        self._attr_icon = "mdi:flash-outline"
 
     @property
     def native_value(self) -> float | None:
@@ -293,12 +292,12 @@ class _TelemetryCh1Current(BaseEntity, sensor.SensorEntity):
     def __init__(self, coordinator):
         super().__init__(coordinator)
         self.with_name(f"tel_ch1_current", "Current 1")
-        self._attr_device_class = sensor.SensorDeviceClass.VOLTAGE
+        self._attr_device_class = sensor.SensorDeviceClass.CURRENT
         self._attr_state_class = "measurement"
         self._attr_native_unit_of_measurement = "mA"
         self._attr_suggested_display_precision = 1
         self._attr_entity_registry_enabled_default = False
-        self._attr_icon = "mdi:radioactive"
+        self._attr_icon = "mdi:current-dc"
 
 
     @property
@@ -318,7 +317,7 @@ class _TelemetryCh2Voltage(BaseEntity, sensor.SensorEntity):
         self._attr_native_unit_of_measurement = "V"
         self._attr_suggested_display_precision = 1
         self._attr_entity_registry_enabled_default = False
-        self._attr_icon = "mdi:radioactive"
+        self._attr_icon = "mdi:flash-outline"
 
 
     @property
@@ -333,12 +332,12 @@ class _TelemetryCh2Current(BaseEntity, sensor.SensorEntity):
     def __init__(self, coordinator):
         super().__init__(coordinator)
         self.with_name(f"tel_ch2_current", "Current 2")
-        self._attr_device_class = sensor.SensorDeviceClass.VOLTAGE
+        self._attr_device_class = sensor.SensorDeviceClass.CURRENT
         self._attr_state_class = "measurement"
         self._attr_native_unit_of_measurement = "mA"
         self._attr_suggested_display_precision = 1
         self._attr_entity_registry_enabled_default = False
-        self._attr_icon = "mdi:radioactive"
+        self._attr_icon = "mdi:current-dc"
 
 
     @property
@@ -358,7 +357,7 @@ class _TelemetryCh3Voltage(BaseEntity, sensor.SensorEntity):
         self._attr_native_unit_of_measurement = "V"
         self._attr_suggested_display_precision = 1
         self._attr_entity_registry_enabled_default = False
-        self._attr_icon = "mdi:radioactive"
+        self._attr_icon = "mdi:flash-outline"
 
 
     @property
@@ -373,12 +372,12 @@ class _TelemetryCh3Current(BaseEntity, sensor.SensorEntity):
     def __init__(self, coordinator):
         super().__init__(coordinator)
         self.with_name(f"tel_ch3_current", "Current 3")
-        self._attr_device_class = sensor.SensorDeviceClass.VOLTAGE
+        self._attr_device_class = sensor.SensorDeviceClass.CURRENT
         self._attr_state_class = "measurement"
         self._attr_native_unit_of_measurement = "mA"
         self._attr_suggested_display_precision = 1
         self._attr_entity_registry_enabled_default = False
-        self._attr_icon = "mdi:radioactive"
+        self._attr_icon = "mdi:current-dc"
 
 
     @property
@@ -398,7 +397,7 @@ class _TelemetryCh4Voltage(BaseEntity, sensor.SensorEntity):
         self._attr_native_unit_of_measurement = "V"
         self._attr_suggested_display_precision = 1
         self._attr_entity_registry_enabled_default = False
-        self._attr_icon = "mdi:radioactive"
+        self._attr_icon = "mdi:flash-outline"
 
 
     @property
@@ -413,12 +412,12 @@ class _TelemetryCh4Current(BaseEntity, sensor.SensorEntity):
     def __init__(self, coordinator):
         super().__init__(coordinator)
         self.with_name(f"tel_ch4_current", "Current 4")
-        self._attr_device_class = sensor.SensorDeviceClass.VOLTAGE
+        self._attr_device_class = sensor.SensorDeviceClass.CURRENT
         self._attr_state_class = "measurement"
         self._attr_native_unit_of_measurement = "mA"
         self._attr_suggested_display_precision = 1
         self._attr_entity_registry_enabled_default = False
-        self._attr_icon = "mdi:radioactive"
+        self._attr_icon = "mdi:current-dc"
 
 
     @property
@@ -438,7 +437,7 @@ class _TelemetryCh5Voltage(BaseEntity, sensor.SensorEntity):
         self._attr_native_unit_of_measurement = "V"
         self._attr_suggested_display_precision = 1
         self._attr_entity_registry_enabled_default = False
-        self._attr_icon = "mdi:radioactive"
+        self._attr_icon = "mdi:flash-outline"
 
 
     @property
@@ -453,12 +452,12 @@ class _TelemetryCh5Current(BaseEntity, sensor.SensorEntity):
     def __init__(self, coordinator):
         super().__init__(coordinator)
         self.with_name(f"tel_ch5_current", "Current 5")
-        self._attr_device_class = sensor.SensorDeviceClass.VOLTAGE
+        self._attr_device_class = sensor.SensorDeviceClass.CURRENT
         self._attr_state_class = "measurement"
         self._attr_native_unit_of_measurement = "mA"
         self._attr_suggested_display_precision = 1
         self._attr_entity_registry_enabled_default = False
-        self._attr_icon = "mdi:radioactive"
+        self._attr_icon = "mdi:current-dc"
 
 
     @property
@@ -478,7 +477,7 @@ class _TelemetryCh6Voltage(BaseEntity, sensor.SensorEntity):
         self._attr_native_unit_of_measurement = "V"
         self._attr_suggested_display_precision = 1
         self._attr_entity_registry_enabled_default = False
-        self._attr_icon = "mdi:radioactive"
+        self._attr_icon = "mdi:flash-outline"
 
 
     @property
@@ -493,12 +492,12 @@ class _TelemetryCh6Current(BaseEntity, sensor.SensorEntity):
     def __init__(self, coordinator):
         super().__init__(coordinator)
         self.with_name(f"tel_ch6_current", "Current 6")
-        self._attr_device_class = sensor.SensorDeviceClass.VOLTAGE
+        self._attr_device_class = sensor.SensorDeviceClass.CURRENT
         self._attr_state_class = "measurement"
         self._attr_native_unit_of_measurement = "mA"
         self._attr_suggested_display_precision = 1
         self._attr_entity_registry_enabled_default = False
-        self._attr_icon = "mdi:radioactive"
+        self._attr_icon = "mdi:current-dc"
 
 
     @property
@@ -518,7 +517,7 @@ class _TelemetryCh7Voltage(BaseEntity, sensor.SensorEntity):
         self._attr_native_unit_of_measurement = "V"
         self._attr_suggested_display_precision = 1
         self._attr_entity_registry_enabled_default = False
-        self._attr_icon = "mdi:radioactive"
+        self._attr_icon = "mdi:flash-outline"
 
 
     @property
@@ -533,12 +532,12 @@ class _TelemetryCh7Current(BaseEntity, sensor.SensorEntity):
     def __init__(self, coordinator):
         super().__init__(coordinator)
         self.with_name(f"tel_ch7_current", "Current 7")
-        self._attr_device_class = sensor.SensorDeviceClass.VOLTAGE
+        self._attr_device_class = sensor.SensorDeviceClass.CURRENT
         self._attr_state_class = "measurement"
         self._attr_native_unit_of_measurement = "mA"
         self._attr_suggested_display_precision = 1
         self._attr_entity_registry_enabled_default = False
-        self._attr_icon = "mdi:radioactive"
+        self._attr_icon = "mdi:current-dc"
 
 
     @property
@@ -558,7 +557,7 @@ class _TelemetryCh8Voltage(BaseEntity, sensor.SensorEntity):
         self._attr_native_unit_of_measurement = "V"
         self._attr_suggested_display_precision = 1
         self._attr_entity_registry_enabled_default = False
-        self._attr_icon = "mdi:radioactive"
+        self._attr_icon = "mdi:flash-outline"
 
 
     @property
@@ -573,12 +572,12 @@ class _TelemetryCh8Current(BaseEntity, sensor.SensorEntity):
     def __init__(self, coordinator):
         super().__init__(coordinator)
         self.with_name(f"tel_ch8_current", "Current 8")
-        self._attr_device_class = sensor.SensorDeviceClass.VOLTAGE
+        self._attr_device_class = sensor.SensorDeviceClass.CURRENT
         self._attr_state_class = "measurement"
         self._attr_native_unit_of_measurement = "mA"
         self._attr_suggested_display_precision = 1
         self._attr_entity_registry_enabled_default = False
-        self._attr_icon = "mdi:radioactive"
+        self._attr_icon = "mdi:current-dc"
 
 
     @property
