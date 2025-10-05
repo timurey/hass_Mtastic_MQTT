@@ -280,6 +280,7 @@ class _TelemetryCh1Voltage(BaseEntity, sensor.SensorEntity):
         self._attr_entity_registry_enabled_default = False
         self._attr_icon = "mdi:flash-outline"
 
+
     @property
     def native_value(self) -> float | None:
         if tel := self.coordinator.data.get("power_metrics"):
