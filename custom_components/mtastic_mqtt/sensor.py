@@ -67,7 +67,7 @@ class _TelemetryVoltage(BaseEntity, sensor.SensorEntity):
         self._attr_device_class = sensor.SensorDeviceClass.VOLTAGE
         self._attr_state_class = "measurement"
         self._attr_native_unit_of_measurement = "V"
-        self._attr_suggested_display_precision = 1
+        self._attr_suggested_display_precision = 2
         self._attr_entity_registry_enabled_default = False
         self._attr_entity_category = EntityCategory.DIAGNOSTIC
 
@@ -276,7 +276,7 @@ class _TelemetryCh1Voltage(BaseEntity, sensor.SensorEntity):
         self._attr_device_class = sensor.SensorDeviceClass.VOLTAGE
         self._attr_state_class = "measurement"
         self._attr_native_unit_of_measurement = "V"
-        self._attr_suggested_display_precision = 1
+        self._attr_suggested_display_precision = 2
         self._attr_entity_registry_enabled_default = False
         self._attr_icon = "mdi:flash-outline"
 
@@ -316,7 +316,7 @@ class _TelemetryCh2Voltage(BaseEntity, sensor.SensorEntity):
         self._attr_device_class = sensor.SensorDeviceClass.VOLTAGE
         self._attr_state_class = "measurement"
         self._attr_native_unit_of_measurement = "V"
-        self._attr_suggested_display_precision = 1
+        self._attr_suggested_display_precision = 2
         self._attr_entity_registry_enabled_default = False
         self._attr_icon = "mdi:flash-outline"
 
@@ -356,7 +356,7 @@ class _TelemetryCh3Voltage(BaseEntity, sensor.SensorEntity):
         self._attr_device_class = sensor.SensorDeviceClass.VOLTAGE
         self._attr_state_class = "measurement"
         self._attr_native_unit_of_measurement = "V"
-        self._attr_suggested_display_precision = 1
+        self._attr_suggested_display_precision = 2
         self._attr_entity_registry_enabled_default = False
         self._attr_icon = "mdi:flash-outline"
 
@@ -396,7 +396,7 @@ class _TelemetryCh4Voltage(BaseEntity, sensor.SensorEntity):
         self._attr_device_class = sensor.SensorDeviceClass.VOLTAGE
         self._attr_state_class = "measurement"
         self._attr_native_unit_of_measurement = "V"
-        self._attr_suggested_display_precision = 1
+        self._attr_suggested_display_precision = 2
         self._attr_entity_registry_enabled_default = False
         self._attr_icon = "mdi:flash-outline"
 
@@ -436,7 +436,7 @@ class _TelemetryCh5Voltage(BaseEntity, sensor.SensorEntity):
         self._attr_device_class = sensor.SensorDeviceClass.VOLTAGE
         self._attr_state_class = "measurement"
         self._attr_native_unit_of_measurement = "V"
-        self._attr_suggested_display_precision = 1
+        self._attr_suggested_display_precision = 2
         self._attr_entity_registry_enabled_default = False
         self._attr_icon = "mdi:flash-outline"
 
@@ -476,7 +476,7 @@ class _TelemetryCh6Voltage(BaseEntity, sensor.SensorEntity):
         self._attr_device_class = sensor.SensorDeviceClass.VOLTAGE
         self._attr_state_class = "measurement"
         self._attr_native_unit_of_measurement = "V"
-        self._attr_suggested_display_precision = 1
+        self._attr_suggested_display_precision = 2
         self._attr_entity_registry_enabled_default = False
         self._attr_icon = "mdi:flash-outline"
 
@@ -516,7 +516,7 @@ class _TelemetryCh7Voltage(BaseEntity, sensor.SensorEntity):
         self._attr_device_class = sensor.SensorDeviceClass.VOLTAGE
         self._attr_state_class = "measurement"
         self._attr_native_unit_of_measurement = "V"
-        self._attr_suggested_display_precision = 1
+        self._attr_suggested_display_precision = 2
         self._attr_entity_registry_enabled_default = False
         self._attr_icon = "mdi:flash-outline"
 
@@ -556,7 +556,7 @@ class _TelemetryCh8Voltage(BaseEntity, sensor.SensorEntity):
         self._attr_device_class = sensor.SensorDeviceClass.VOLTAGE
         self._attr_state_class = "measurement"
         self._attr_native_unit_of_measurement = "V"
-        self._attr_suggested_display_precision = 1
+        self._attr_suggested_display_precision = 2
         self._attr_entity_registry_enabled_default = False
         self._attr_icon = "mdi:flash-outline"
 
