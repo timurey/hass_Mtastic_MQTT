@@ -37,6 +37,25 @@ def _as_telemetry(obj, envelope):
             "barometric_pressure": obj.environment_metrics.barometric_pressure,
             "gas_resistance": obj.environment_metrics.gas_resistance,
         })
+    elif type_ == "power_metrics":
+        return ("power_metrics", {
+            "ch1_voltage": obj.power_metrics.ch1_voltage,
+            "ch1_current": obj.power_metrics.ch1_current,
+            "ch2_voltage": obj.power_metrics.ch2_voltage,
+            "ch2_current": obj.power_metrics.ch2_current,
+            "ch3_voltage": obj.power_metrics.ch3_voltage,
+            "ch3_current": obj.power_metrics.ch3_current,
+            "ch4_voltage": obj.power_metrics.ch4_voltage,
+            "ch4_current": obj.power_metrics.ch4_current,
+            "ch5_voltage": obj.power_metrics.ch5_voltage,
+            "ch5_current": obj.power_metrics.ch5_current,
+            "ch6_voltage": obj.power_metrics.ch6_voltage,
+            "ch6_current": obj.power_metrics.ch6_current,
+            "ch7_voltage": obj.power_metrics.ch7_voltage,
+            "ch7_current": obj.power_metrics.ch7_current,
+            "ch8_voltage": obj.power_metrics.ch8_voltage,
+            "ch8_current": obj.power_metrics.ch8_current,
+        })
     return (None, {})
 
 def _as_node_info(obj, envelope):
