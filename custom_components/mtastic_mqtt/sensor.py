@@ -20,6 +20,7 @@ async def async_setup_entry(hass, entry, async_setup_entities):
         _TelemetryRelativeHumidity(coordinator),
         _TelemetryBarometricPressure(coordinator),
         _TelemetryGasResistance(coordinator),
+        _TelemetryRadiation(coordinator),
     ])
 
 class _TelemetryBattery(BaseEntity, sensor.SensorEntity):
@@ -213,6 +214,7 @@ class _TelemetryBarometricPressure(BaseEntity, sensor.SensorEntity):
                 return value
         return None
 
+
 class _TelemetryGasResistance(BaseEntity, sensor.SensorEntity):
 
     def __init__(self, coordinator):
@@ -227,5 +229,25 @@ class _TelemetryGasResistance(BaseEntity, sensor.SensorEntity):
     def native_value(self) -> float | None:
         if tel := self.coordinator.data.get("environment_metrics"):
             if (value := tel.get("gas_resistance")) > 0:
+                return value
+        return None
+
+
+class _TelemetryRadiation(BaseEntity, sensor.SensorEntity):
+
+    def __init__(self, coordinator):
+        super().__init__(coordinator)
+        self.with_name(f"tel_radiation", "Radiation")
+        self._attr_state_class = "measurement"
+        self._attr_native_unit_of_measurement = "µR/h"
+        self._attr_suggested_display_precision = 1
+        self._attr_entity_registry_enabled_default = False
+        self._attr_icon = "mdi:radioactive"
+
+
+    @property
+    def native_value(self) -> float | None:
+        if tel := self.coordinator.data.get("environment_metrics"):
+            if (value := tel.get("radiation")) > 0:
                 return value
         return None

@@ -36,6 +36,7 @@ def _as_telemetry(obj, envelope):
             "relative_humidity": obj.environment_metrics.relative_humidity,
             "barometric_pressure": obj.environment_metrics.barometric_pressure,
             "gas_resistance": obj.environment_metrics.gas_resistance,
+            "radiation": obj.environment_metrics.radiation,
         })
     return (None, {})
 
