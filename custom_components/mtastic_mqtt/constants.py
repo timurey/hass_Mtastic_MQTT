@@ -1,4 +1,5 @@
-import re
+"""Constants for the Meshtastic MQTT integration."""
+from typing import Final
 
-DOMAIN = "mtastic_mqtt"
-PLATFORMS = ["binary_sensor", "sensor", "device_tracker"]
+DOMAIN: Final = "mtastic_mqtt"
+PLATFORMS: Final = ["binary_sensor", "sensor", "device_tracker"]
