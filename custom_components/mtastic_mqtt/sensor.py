@@ -289,7 +289,8 @@ class _TelemetryRadiation(BaseEntity, sensor.SensorEntity):
     def __init__(self, coordinator):
         super().__init__(coordinator)
         self.with_name(f"tel_radiation", "Radiation")
-        self._attr_state_class = sensor.SensorStateClass.MEASUREMENT        self._attr_native_unit_of_measurement = "µR/h"
+        self._attr_state_class = sensor.SensorStateClass.MEASUREMENT
+        self._attr_native_unit_of_measurement = "µR/h"
         self._attr_suggested_display_precision = 1
         self._attr_entity_registry_enabled_default = False
         self._attr_icon = "mdi:radioactive"
