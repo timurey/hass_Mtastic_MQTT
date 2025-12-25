@@ -215,8 +215,14 @@ class TelemetryTemperatureSensor(BaseEntity, sensor.SensorEntity):
     def native_value(self) -> float | None:
         """Return the state of the sensor."""
         if tel := self.coordinator.data.get("environment_metrics"):
-            if (value := tel.get("temperature", 0)) > 0:
+            value = tel.get("temperature")
+            if isinstance(value, (int, float)):
                 return float(value)
+            elif isinstance(value, str):
+                try:
+                    return float(value)
+                except (ValueError, TypeError):
+                    return None
         return None
 
 
